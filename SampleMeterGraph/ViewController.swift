@@ -10,18 +10,20 @@ import UIKit
 
 class ViewController: UIViewController, UITextFieldDelegate {
     
-    @IBOutlet weak var valueTextField: UITextField!
+    @IBOutlet weak var redValueTextField: UITextField!
+    @IBOutlet weak var blueValueTextField: UITextField!
     @IBOutlet weak var changeValueButton: UIButton!
     
     var graphView:MeterPieGraphView!;
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        valueTextField.delegate = self
+        redValueTextField.delegate = self
+        blueValueTextField.delegate = self
         
         var params = [Dictionary<String,AnyObject>]()
-        params.append(["value":5,"color":UIColor.redColor()])
-        params.append(["value":5,"color":UIColor.blueColor()])
+        params.append(["value":3,"color":UIColor.redColor()])
+        params.append(["value":7,"color":UIColor.blueColor()])
 //        let width = self.view.frame.width
         let myBoundSize: CGSize = UIScreen.mainScreen().bounds.size
         let width = myBoundSize.width
