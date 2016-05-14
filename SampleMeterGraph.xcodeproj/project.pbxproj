@@ -14,6 +14,7 @@
 		E72D332E1CE6C7C900BCD805 /* SampleMeterGraphTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D332D1CE6C7C900BCD805 /* SampleMeterGraphTests.swift */; };
 		E72D33391CE6C7C900BCD805 /* SampleMeterGraphUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D33381CE6C7C900BCD805 /* SampleMeterGraphUITests.swift */; };
 		E72D33471CE6C9B200BCD805 /* MeterPieGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D33461CE6C9B200BCD805 /* MeterPieGraphView.swift */; settings = {ASSET_TAGS = (); }; };
+		E72D33491CE6D0A700BCD805 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72D33481CE6D0A700BCD805 /* ViewController.xib */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -47,6 +48,7 @@
 		E72D33381CE6C7C900BCD805 /* SampleMeterGraphUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleMeterGraphUITests.swift; sourceTree = "<group>"; };
 		E72D333A1CE6C7C900BCD805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E72D33461CE6C9B200BCD805 /* MeterPieGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeterPieGraphView.swift; sourceTree = "<group>"; };
+		E72D33481CE6D0A700BCD805 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -99,6 +101,7 @@
 			children = (
 				E72D33181CE6C7C900BCD805 /* AppDelegate.swift */,
 				E72D331A1CE6C7C900BCD805 /* ViewController.swift */,
+				E72D33481CE6D0A700BCD805 /* ViewController.xib */,
 				E72D331F1CE6C7C900BCD805 /* Assets.xcassets */,
 				E72D33211CE6C7C900BCD805 /* LaunchScreen.storyboard */,
 				E72D33241CE6C7C900BCD805 /* Info.plist */,
@@ -232,6 +235,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E72D33231CE6C7C900BCD805 /* LaunchScreen.storyboard in Resources */,
+				E72D33491CE6D0A700BCD805 /* ViewController.xib in Resources */,
 				E72D33201CE6C7C900BCD805 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -10,6 +10,8 @@ import UIKit
 
 class MeterPieGraphView: UIView {
     var _params:[Dictionary<String,AnyObject>]!
+    var _end_point:CGFloat!
+    var _width:CGFloat!
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -22,7 +24,14 @@ class MeterPieGraphView: UIView {
     }
     
     func update(link:AnyObject){
-        
+//        let onePercentWidth = _width/100
+//        _end_point = _end_point + onePercentWidth
+//        if(_end_point >= _width) {
+//            link.invalidate()
+//        }
+//        else{
+//            self.setNeedsDisplay()
+//        }
     }
     
     func startAnimating(){
@@ -40,7 +49,7 @@ class MeterPieGraphView: UIView {
         var start_point:CGFloat = sideMargin;
         var end_point:CGFloat = start_point + width;
         
-        
+        _width = width
         
         
         print("this is x:", start_point);
@@ -56,7 +65,9 @@ class MeterPieGraphView: UIView {
         for dic : Dictionary<String,AnyObject> in _params {
             let value = CGFloat(dic["value"] as! Float)
             end_point = start_point + width * (value/max);
-            
+//            if(end_point > _end_point) {
+//                end_point = _end_point;
+//            }
             //2.描画用の設定（図形の線の色を設定）
             let color:UIColor = dic["color"] as! UIColor
             let cgColor:CGColorRef = color.CGColor

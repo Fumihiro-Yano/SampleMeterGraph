@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ViewController" customModule="SampleMeterGraph" customModuleProvider="target">
+            <connections>
+                <outlet property="changeValueButton" destination="X7i-9I-8ko" id="hkV-da-KRJ"/>
+                <outlet property="valueTextField" destination="HOR-2E-5CL" id="6St-J8-XaY"/>
+                <outlet property="view" destination="ZDG-FV-4Fo" id="PML-9W-KGD"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ZDG-FV-4Fo">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7i-9I-8ko">
+                    <rect key="frame" x="278" y="323" width="45" height="30"/>
+                    <state key="normal" title="再計算"/>
+                </button>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HOR-2E-5CL">
+                    <rect key="frame" x="150" y="234" width="300" height="30"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="300" id="meo-QP-dVi"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="X7i-9I-8ko" firstAttribute="centerX" secondItem="HOR-2E-5CL" secondAttribute="centerX" id="HL1-GJ-j6M"/>
+                <constraint firstItem="HOR-2E-5CL" firstAttribute="top" secondItem="ZDG-FV-4Fo" secondAttribute="top" constant="234" id="OoG-6q-usB"/>
+                <constraint firstItem="X7i-9I-8ko" firstAttribute="top" secondItem="HOR-2E-5CL" secondAttribute="bottom" constant="59" id="TVI-ru-1H8"/>
+                <constraint firstItem="X7i-9I-8ko" firstAttribute="centerX" secondItem="ZDG-FV-4Fo" secondAttribute="centerX" id="ggh-Mz-56K"/>
+            </constraints>
+            <point key="canvasLocation" x="98" y="61"/>
+        </view>
+    </objects>
+</document>
