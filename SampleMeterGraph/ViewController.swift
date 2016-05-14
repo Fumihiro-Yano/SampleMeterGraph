@@ -13,8 +13,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var redValueTextField: UITextField!
     @IBOutlet weak var blueValueTextField: UITextField!
     @IBOutlet weak var changeValueButton: UIButton!
-    var redValue:Int?
-    var blueValue:Int?
+    var redValue:Int!
+    var blueValue:Int!
     
     var graphView:MeterPieGraphView!;
     override func viewDidLoad() {
@@ -24,8 +24,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         blueValueTextField.delegate = self
         
         var params = [Dictionary<String,AnyObject>]()
-        params.append(["value":3,"color":UIColor.redColor()])
-        params.append(["value":7,"color":UIColor.blueColor()])
+        redValue = 3
+        blueValue = 7
+        params.append(["value":redValue,"color":UIColor.redColor()])
+        params.append(["value":blueValue,"color":UIColor.blueColor()])
 //        let width = self.view.frame.width
         let myBoundSize: CGSize = UIScreen.mainScreen().bounds.size
         let width = myBoundSize.width
@@ -49,11 +51,11 @@ class ViewController: UIViewController, UITextFieldDelegate {
     func textFieldShouldEndEditing(textField: UITextField) -> Bool {
         print("textFieldShouldEndEditing:" + textField.text!)
         
-        if((redValueTextField.text) != nil) {
+        if((redValueTextField.text) != nil && (redValueTextField.text) != "") {
           redValue = Int(redValueTextField.text!)
           print("this is redValue:",redValue)
         }
-        if((blueValueTextField.text) != nil) {
+        if((blueValueTextField.text) != nil && (blueValueTextField.text) != "") {
           blueValue = Int(blueValueTextField.text!)
           print("this is blueValue:",blueValue)
         }
