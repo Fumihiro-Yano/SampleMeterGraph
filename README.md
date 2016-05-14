@@ -1,0 +1,2 @@
+# SampleMeterGraph
+drawRectでメーターを作って、CADisplayLinkで値に応じて動かすサンプル
