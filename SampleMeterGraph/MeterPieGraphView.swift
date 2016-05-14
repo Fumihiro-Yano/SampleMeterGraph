@@ -21,17 +21,21 @@ class MeterPieGraphView: UIView {
         super.init(frame: frame)
         _params = params;
         self.backgroundColor = UIColor.clearColor();
+        let myBoundSize: CGSize = UIScreen.mainScreen().bounds.size
+        let width = myBoundSize.width
+        _width = width
+        _end_point = 10
     }
     
     func update(link:AnyObject){
-//        let onePercentWidth = _width/100
-//        _end_point = _end_point + onePercentWidth
-//        if(_end_point >= _width) {
-//            link.invalidate()
-//        }
-//        else{
-//            self.setNeedsDisplay()
-//        }
+        let onePercentWidth = _width/100
+        _end_point = _end_point + onePercentWidth
+        if(_end_point - 10 > _width) {
+            link.invalidate()
+        }
+        else{
+            self.setNeedsDisplay()
+        }
     }
     
     func startAnimating(){
@@ -47,7 +51,7 @@ class MeterPieGraphView: UIView {
         let sideMargin:CGFloat  = 10.0;
         let width:CGFloat = rect.size.width - (sideMargin * 2);
         var start_point:CGFloat = sideMargin;
-        var end_point:CGFloat = start_point + width;
+        var end_point:CGFloat = start_point;
         
         _width = width
         
@@ -65,9 +69,9 @@ class MeterPieGraphView: UIView {
         for dic : Dictionary<String,AnyObject> in _params {
             let value = CGFloat(dic["value"] as! Float)
             end_point = start_point + width * (value/max);
-//            if(end_point > _end_point) {
-//                end_point = _end_point;
-//            }
+            if(end_point > _end_point) {
+                end_point = _end_point;
+            }
             //2.描画用の設定（図形の線の色を設定）
             let color:UIColor = dic["color"] as! UIColor
             let cgColor:CGColorRef = color.CGColor

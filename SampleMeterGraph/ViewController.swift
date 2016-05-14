@@ -33,7 +33,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
         let width = myBoundSize.width
         graphView = MeterPieGraphView(frame: CGRectMake(0, 30, width, 150), params: params)
         self.view.addSubview(graphView)
-        //        graphView.startAnimating()
+//                graphView.startAnimating()
     }
     
     override func didReceiveMemoryWarning() {
@@ -59,6 +59,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
           blueValue = Int(blueValueTextField.text!)
           print("this is blueValue:",blueValue)
         }
+        graphView.startAnimating()
         return true
     }
     
