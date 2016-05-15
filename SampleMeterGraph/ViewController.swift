@@ -16,7 +16,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     var redValue:Int!
     var blueValue:Int!
     
-    var graphView:MeterPieGraphView!;
+    var graphView:MeterPieGraphView2!;
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -31,7 +31,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
 //        let width = self.view.frame.width
         let myBoundSize: CGSize = UIScreen.mainScreen().bounds.size
         let width = myBoundSize.width
-        graphView = MeterPieGraphView(frame: CGRectMake(0, 30, width, 150), params: params)
+        graphView = MeterPieGraphView2(frame: CGRectMake(0, 30, width, 150), params: params)
         self.view.addSubview(graphView)
 //                graphView.startAnimating()
     }

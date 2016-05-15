@@ -83,6 +83,7 @@ class MeterPieGraphView: UIView {
             CGContextStrokePath(context)
             start_point = end_point
         }
+
     }
     
 }

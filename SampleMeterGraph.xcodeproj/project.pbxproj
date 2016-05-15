@@ -15,6 +15,7 @@
 		E72D33391CE6C7C900BCD805 /* SampleMeterGraphUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D33381CE6C7C900BCD805 /* SampleMeterGraphUITests.swift */; };
 		E72D33471CE6C9B200BCD805 /* MeterPieGraphView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D33461CE6C9B200BCD805 /* MeterPieGraphView.swift */; settings = {ASSET_TAGS = (); }; };
 		E72D33491CE6D0A700BCD805 /* ViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E72D33481CE6D0A700BCD805 /* ViewController.xib */; settings = {ASSET_TAGS = (); }; };
+		E72D334B1CE79AF700BCD805 /* MeterPieGraphView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = E72D334A1CE79AF700BCD805 /* MeterPieGraphView2.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		E72D333A1CE6C7C900BCD805 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E72D33461CE6C9B200BCD805 /* MeterPieGraphView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeterPieGraphView.swift; sourceTree = "<group>"; };
 		E72D33481CE6D0A700BCD805 /* ViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ViewController.xib; sourceTree = "<group>"; };
+		E72D334A1CE79AF700BCD805 /* MeterPieGraphView2.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeterPieGraphView2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -106,6 +108,7 @@
 				E72D33211CE6C7C900BCD805 /* LaunchScreen.storyboard */,
 				E72D33241CE6C7C900BCD805 /* Info.plist */,
 				E72D33461CE6C9B200BCD805 /* MeterPieGraphView.swift */,
+				E72D334A1CE79AF700BCD805 /* MeterPieGraphView2.swift */,
 			);
 			path = SampleMeterGraph;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E72D33471CE6C9B200BCD805 /* MeterPieGraphView.swift in Sources */,
+				E72D334B1CE79AF700BCD805 /* MeterPieGraphView2.swift in Sources */,
 				E72D331B1CE6C7C900BCD805 /* ViewController.swift in Sources */,
 				E72D33191CE6C7C900BCD805 /* AppDelegate.swift in Sources */,
 			);
