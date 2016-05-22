@@ -20,6 +20,9 @@
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X7i-9I-8ko">
                     <rect key="frame" x="278" y="397" width="45" height="30"/>
                     <state key="normal" title="再計算"/>
+                    <connections>
+                        <action selector="pushParams:" destination="-1" eventType="touchUpInside" id="G0z-lq-0Oj"/>
+                    </connections>
                 </button>
                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HOR-2E-5CL">
                     <rect key="frame" x="150" y="257" width="300" height="30"/>

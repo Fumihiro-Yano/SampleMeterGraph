@@ -12,6 +12,7 @@ class MeterPieGraphView: UIView {
     var _params:[Dictionary<String,AnyObject>]!
     var _end_point:CGFloat!
     var _width:CGFloat!
+    var _change_point:CGFloat!
     
     required init(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -66,12 +67,20 @@ class MeterPieGraphView: UIView {
             max += value;
         }
         
+        var num:Int = 0
         for dic : Dictionary<String,AnyObject> in _params {
             let value = CGFloat(dic["value"] as! Float)
             end_point = start_point + width * (value/max);
-            if(end_point > _end_point) {
-                end_point = _end_point;
+            num += 1
+            if(num == 1) {
+                print("\(num)回目")
+                _change_point = end_point
+                print(_change_point)
             }
+
+//            if(end_point > _end_point) {
+//                end_point = _end_point;
+//            }
             //2.描画用の設定（図形の線の色を設定）
             let color:UIColor = dic["color"] as! UIColor
             let cgColor:CGColorRef = color.CGColor

@@ -24,10 +24,10 @@ class ViewController: UIViewController, UITextFieldDelegate {
         blueValueTextField.delegate = self
         
         var params = [Dictionary<String,AnyObject>]()
-        redValue = 3
-        blueValue = 7
-        params.append(["value":redValue,"color":UIColor.redColor()])
-        params.append(["value":blueValue,"color":UIColor.blueColor()])
+//        redValue = 5
+//        blueValue = 5
+        params.append(["value":5,"color":UIColor.redColor()])
+        params.append(["value":5,"color":UIColor.blueColor()])
 //        let width = self.view.frame.width
         let myBoundSize: CGSize = UIScreen.mainScreen().bounds.size
         let width = myBoundSize.width
@@ -40,6 +40,8 @@ class ViewController: UIViewController, UITextFieldDelegate {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+    
+    
     
     func textFieldDidBeginEditing(textField: UITextField){
         print("textFieldDidBeginEditing:" + textField.text!)
@@ -59,7 +61,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
           blueValue = Int(blueValueTextField.text!)
           print("this is blueValue:",blueValue)
         }
-        graphView.startAnimating()
+        
         return true
     }
     
@@ -70,5 +72,12 @@ class ViewController: UIViewController, UITextFieldDelegate {
         textField.resignFirstResponder()
         
         return true
+    }
+    
+    @IBAction func pushParams(sender: AnyObject) {
+        var params = [Dictionary<String,AnyObject>]()
+        params.append(["value":redValue,"color":UIColor.redColor()])
+        params.append(["value":blueValue,"color":UIColor.blueColor()])
+        graphView.startAnimating(params)
     }
 }
